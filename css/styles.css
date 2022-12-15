@@ -2,13 +2,15 @@ body {
     width: 100%;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
 }
 header {
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 0;
     width: 100%;
-    background-color: lightgray;
+    /* background-color: lightgray; */
+    background-color: #f8f8f8;
     text-align: center;
 }
 nav {
@@ -23,28 +25,39 @@ ul {
 }
 li {
     display: inline-block;
-    width: 64px;
+    /* width: 64px; */
     text-align: center;
     vertical-align: center;
-    border: 1px solid red;
+    padding: 0 12px;
+}
+li + li {
+    margin-left: 24px;
 }
 
 a {
     text-decoration: none;
-    border: 1px solid purple;
-    
+    color: black;
+}
+
+li:hover {
+    background-color: rgb(159, 159, 159);
+    border-radius: 2px;
 }
 
 ul + ul {
     position: fixed;
     right: 0;
+    margin-right: 24px;
+}
+
+ul+ ul > li {
+    width: 20px;
 }
 
 
 .logo {
-    margin: 4px;
-    padding: 8px;
-    border: 1px solid black;
+    margin-left: 16px;
+    /* color: orangered; */
     font-weight: bold;
 }
 
@@ -60,8 +73,7 @@ ul + ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;    
-
-
+    margin-bottom: 32px;
 }
 .home-container > .message {
     width: calc(100% - 600px);
@@ -77,16 +89,21 @@ ul + ul {
     background-repeat: no-repeat;
 }
 
+.learn-more:hover {
+    color: blue;
+}
+
 .product-container {
-    /* text-align: center; */
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    margin: 24px 0 24px;
+    margin-bottom: 24px;
+    /* margin: 24px 0 24px; */
 }
 
 .product-item {
-    margin-left: 24px;
+    margin: 10px;
 }
 
 
@@ -102,7 +119,7 @@ ul + ul {
 
 .product-image {
     height: 220px;
-    width: 150px;
+    width: 160px;
 }
 
 .product-name, .product-price {
@@ -111,7 +128,8 @@ ul + ul {
 
 footer {
     padding: 8px;
-    background-color: lightgray;
+    /* background-color: lightgray; */
+    background-color: #f8f8f8;
     text-align: center;
 }
 
@@ -120,11 +138,19 @@ h6 {
     font-size: 16px;
 }
 
+hr {
+    color: #f8f8f8;
+}
+
 .contact {
-    width: 40%;
+    text-align: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.contact-item {
+    margin: 0 32px;
 }
 
 .contact-item p {
@@ -140,7 +166,7 @@ h6 {
     .home-container > .message {
         width: 100%;
         text-align: center;
-        padding-top: 100px;
+        padding-top: 60px;
     }
     .home-container > .backgroundimage {
         height: 500px;
@@ -151,10 +177,42 @@ h6 {
         background-repeat: no-repeat;
     }
 }
+@media screen and (max-width: 700px) {
+    .heart-btn {
+        text-indent:-9999px;
+    }
+}
 @media screen and (max-width: 600px) {
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        font-size: 20px;
+        margin-left: 0;
+    }
+    nav {
+        justify-content: center;
+    }
+    ul {
+        padding: 0;
+    }
+    .cart-btn {
+        margin-top: 24px;
+        margin-right: 32px;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
     .home-container > .backgroundimage {
         height: 400px;
         background-position: left 20% top 30%;
+    }
+    footer > h6 {
+        font-size: 14px;
+    }
+    footer > p {
+        font-size: 12px;
     }
 }
 @media screen and (max-width: 350px) {
