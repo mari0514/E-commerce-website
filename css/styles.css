@@ -99,14 +99,11 @@ ul+ ul > li {
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 24px;
-    /* margin: 24px 0 24px; */
 }
 
 .product-item {
     margin: 10px;
 }
-
-
 
 .product-like {
     display: inline-block;
@@ -122,8 +119,23 @@ ul+ ul > li {
     width: 160px;
 }
 
-.product-name, .product-price {
+.product-name, .product-price, .add-btn, .remove-btn {
     text-align: center;
+}
+
+.add-btn, .remove-btn {
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    padding: 8px 0;
+}
+
+.add-btn:hover, .remove-btn:hover {
+    background-color: #e2e2e2;
+}
+
+.add-btn:active, .remove-btn:active {
+    position: relative;
+    top: 2px;
 }
 
 footer {
