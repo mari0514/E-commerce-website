@@ -54,6 +54,22 @@ ul+ ul > li {
     width: 20px;
 }
 
+.shopping-cart-container{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+}
+
+.heart-btn, .cart-btn {
+    cursor: pointer;
+}
 
 .logo {
     margin-left: 16px;
@@ -150,7 +166,7 @@ ul+ ul > li {
 }
 
 .product-like:active {
-    color: pink;
+    color: hotpink;
 }
 
 .product-image {
@@ -285,3 +301,4 @@ hr {
         width: 150px;
     }
 }
+
